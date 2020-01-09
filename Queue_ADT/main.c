@@ -3,16 +3,30 @@
 #include "queue.h"
 
 int main(void){
-    int i = 0;
-    Queue_t * uart_queue;
-    uart_queue = Queue_Creat();
-    for(i = 0;i < 110;i++){
-        Queue_Insert(uart_queue,i);
-    }
+    int queries = 0;
+    int command = 0;
+    Queue_DataSize_t data = 0;
+    scanf("%d",&queries);
+    Queue_t * queue;
+    queue = Queue_Creat();
+    while(queries--){
+        scanf("%d",&command);
+        switch(command){
+            case 1:
+                scanf("%ld",&data);
+                Queue_Insert(queue,data);
+                break;
+            case 2:
+                data = Queue_Remove(queue);
+                break;
+            case 3:
+                printf("%ld\n",Queue_Head(queue));
+                break;
+            default:
 
-    for(i = 0;i < 99;i++){
-        printf("%d\t",Queue_Remove(uart_queue));
-    }
+                break;
+        }
 
+    }
     return 0;
 }
