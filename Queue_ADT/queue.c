@@ -1,7 +1,8 @@
 #include "queue.h"
 
-typedef enum{FALSE, TRUE} Bool_t;
 
+
+typedef enum{FALSE, TRUE} Bool_t;
 
 static void Queue_Init(Queue_t * const queue);
 static Bool_t Queue_IsFull(const Queue_t * const queue);

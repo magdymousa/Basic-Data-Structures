@@ -20,7 +20,8 @@ typedef struct{
 	Queue_Length_t Head;
 	Queue_Length_t Tail;
 	Queue_Length_t size;
-	//here >> use function pointers to combine data and its operations in one struct
+
+
 }Queue_t;
 
 
